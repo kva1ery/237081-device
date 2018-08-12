@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Девайс - Интернет магазин</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="logo main-header__logo" href="index.html">Device</a>
+
+      <from class="search-form"></from>
+
+      <a class="main-header__button main-header__button_login" href="#">Войти</a>
+      <a class="main-header__button main-header__button_compare" href="#">Сравнить</a>
+      <a class="main-header__button main-header__button_cart" href="#">Корзина</a>
+
+      <nav class="main-navigation main-header__navigation">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог товаров</a>
+            <ul class="menu__submenu">
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Квадрокоптеры</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Умные часы</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Гарантия</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+    </header>
+
+    <main class="main-content">
+      <h1 class="main-content__title">Моноподы для селфи</h1>
+
+      <ul class="breadcrumbs">
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-item__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-item__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="breadcrumb-item">
+          Моноподы для селфи
+        </li>
+      </ul>
+
+      <div class="catalog-filter">
+        <h2 class="catalog-filter__title">Фильтр:</h2>
+        <form class="filter-form"></form>
+      </div>
+
+      <div class="catalog-sort">
+        <h2 class="catalog-sort__title">Сортировка:</h2>
+        <a class="catalog-sort__link" href="#">По цене</a>
+        <a class="catalog-sort__link" href="#">По типу</a>
+        <a class="catalog-sort__link" href="#">По популярности</a>
+
+        <a class="catalog-sort__order-link catalog-sort__order-link_order_asc" href="#">По возрастанию</a>
+        <a class="catalog-sort__order-link catalog-sort__order-link_order_desc" href="#">По убыванию</a>
+      </div>
+
+      <div class="catalog-items">
+        <ul class="catalog-items-list">
+          <li class="catalog-item">
+            <img class="catalog-item__image" src="http://placehold.it/360x380" alt="Фото товара">
+            <h2 class="catalog-item__title">Любительская селфи-плака</h2>
+            <span class="catalog-item__price">500 руб.</span>
+            <a class="button catalog-item__button-into-cart" href="#">В корзину</a>
+            <a class="catalog-item__button-to-compare" href="#">Добавить к сравнению</a>
+          </li>
+          <li class="catalog-item">
+            <img class="catalog-item__image" src="http://placehold.it/360x380" alt="Фото товара">
+            <h2 class="catalog-item__title">Профессиональная селфи-палка</h2>
+            <span class="catalog-item__price">1500 руб.</span>
+            <a class="button catalog-item__button-into-cart" href="#">В корзину</a>
+            <a class="catalog-item__button-to-compare" href="#">Добавить к сравнению</a>
+          </li>
+          <li class="catalog-item">
+            <img class="catalog-item__image" src="http://placehold.it/360x380" alt="Фото товара">
+            <h2 class="catalog-item__title">Непотопляемая селфи-палка</h2>
+            <span class="catalog-item__price">2500 руб.</span>
+            <a class="button catalog-item__button-into-cart" href="#">В корзину</a>
+            <a class="catalog-item__button-to-compare" href="#">Добавить к сравнению</a>
+          </li>
+          <li class="catalog-item catalog-item_new">
+            <img class="catalog-item__image" src="http://placehold.it/360x380" alt="Фото товара">
+            <h2 class="catalog-item__title">Селфи-палка «Следуй за мной»</h2>
+            <span class="catalog-item__price">4900 руб.</span>
+            <span class="catalog-item__new">Новинка</span>
+            <a class="button catalog-item__button-into-cart" href="#">В корзину</a>
+            <a class="catalog-item__button-to-compare" href="#">Добавить к сравнению</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="pagination">
+        <li class="pagination-item">
+          <a class="pagination-item__button" href="#">Назад</a>
+        </li>
+        <li class="pagination-item pagination-item_current">
+          <a class="pagination-item__button" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item__button" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item__button" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item__button" href="#">Вперед</a>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="main-footer">
+      <a class="logo main-footer__logo" href="index.html">Device</a>
+
+      <a class="main-footer__button main-footer__button_login" href="#">Войти</a>
+      <a class="main-footer__button main-footer__button_compare" href="#">Сравнить</a>
+      <a class="main-footer__button main-footer__button_cart" href="#">Корзина</a>
+
+      <nav class="main-navigation main-footer__navigation">
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Гарантия</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="main-footer__address">
+        <a class="main-footer__link" href="#">г. Москва, ул. Строителей, 15</a>
+      </p>
+      <p class="main-footer__phone">
+        Тел.: <a class="main-footer__link" href="tel:74954959595">+7 (495) 495-95-95</a>
+      </p>
+
+      <div class="main-footer-socials">
+        <ul class="socials-list">
+          <li class="social-item">
+            <a class="social-item__button social-item__button_type_fb" href="#">Facebook</a>
+          </li>
+          <li class="social-item">
+            <a class="social-item__button social-item__button_type_insta" href="#">Instagram</a>
+          </li>
+          <li class="social-item">
+            <a class="social-item__button social-item__button_type_tw" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="copyright-button" href="#">HTML Academy</a>
+    </footer>
+  </body>
+</html>
