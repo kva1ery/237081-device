@@ -6,7 +6,9 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo main-header__logo">Device</a>
+      <a class="main-header__home-link">
+        <img class="logo main-header__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
+      </a>
 
       <form class="search-form"></form>
 
@@ -60,7 +62,7 @@
 
         <ol class="slides-list">
           <li class="slide">
-            <img class="slide__image" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
+            <img class="slide__image" src="./img/slides/monopod-min.png" width="384" height="486" alt="Селфи палка">
 
             <div class="slide__details">
               <b class="slide__lead">
@@ -89,7 +91,7 @@
           </li>
 
           <li class="slide">
-            <img class="slide__image" src="http://placehold.it/345x485" width="345" height="485" alt="Фитнес браслет">
+            <img class="slide__image" src="./img/slides/fitness_band-min.png" width="345" height="485" alt="Фитнес браслет">
 
             <div class="slide__details">
               <b class="slide__lead">
@@ -110,7 +112,7 @@
           </li>
 
           <li class="slide">
-            <img class="slide__image" src="http://placehold.it/526x334" width="526" height="334" alt="Квадрокоптер">
+            <img class="slide__image" src="./img/slides/quadrupter-min.png" width="526" height="334" alt="Квадрокоптер">
 
             <div class="slide__details">
               <b class="slide__lead">
@@ -190,10 +192,10 @@
       <section class="brands">
         <h2 class="section-title visually-hidden">Бренды</h2>
         <ul class="brands-list">
-          <li class="brand"><img src="http://placehold.it/260x100" width="260" height="100" alt="dji"></li>
-          <li class="brand"><img src="http://placehold.it/260x100" width="260" height="100" alt="spGadgets"></li>
-          <li class="brand"><img src="http://placehold.it/260x100" width="260" height="100" alt="GoPro"></li>
-          <li class="brand"><img src="http://placehold.it/260x100" width="260" height="100" alt="Vive"></li>
+          <li class="brand"><img src="img/brands/dji.jpg" width="260" height="100" alt="dji"></li>
+          <li class="brand"><img src="/img/brands/spgadgets.jpg" width="260" height="100" alt="spGadgets"></li>
+          <li class="brand"><img src="/img/brands/gopro.jpg" width="260" height="100" alt="GoPro"></li>
+          <li class="brand"><img src="/img/brands/vive.jpg" width="260" height="100" alt="Vive"></li>
         </ul>
       </section>
 
@@ -218,13 +220,15 @@
         <p class="contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img class="contacts__map" src="http://placehold.it/560x220" width="560" height="220" alt="Карта">
+        <img class="contacts__map-image" src="img/map.jpg" width="560" height="220" alt="Карта. Наш адрес: улица Строителей, 15">
         <a class="button contacts__button" href="#">Напишите нам</a>
       </section>
     </main>
 
     <footer class="main-footer">
-      <a class="logo main-footer__logo">Device</a>
+      <a class="main-footer__home-link">
+        <img class="logo main-footer__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
+      </a>
 
       <a class="main-footer__button main-footer__button_login" href="#">Войти</a>
       <a class="main-footer__button main-footer__button_compare" href="#">Сравнить</a>
@@ -276,7 +280,8 @@
 
     <section class="modal modal-map">
       <h2 class="modal-title visually-hidden">Как до нас добраться</h2>
-      <span class="modal__close">x</span>
+      <img class="modal-map modal-map__map-image" src="img/map-big.jpg" width="960" height="559" alt="Карта. Наш адрес: улица Строителей, 15">
+      <button class="modal__close">x</button>
     </section>
 
   </body>
