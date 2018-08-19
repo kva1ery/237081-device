@@ -12,9 +12,10 @@
 
       <form class="search-form"></form>
 
-      <a class="main-header__button main-header__button_login" href="#">Войти</a>
-      <a class="main-header__button main-header__button_compare" href="#">Сравнить</a>
-      <a class="main-header__button main-header__button_cart" href="#">Корзина</a>
+      <a class="main-header__button main-header__button--user-cabinet" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
+      <a class="main-header__button main-header__button--logout" href="#">Выйти</a>
+      <a class="main-header__button main-header__button--compare" href="#">Сравнить</a>
+      <a class="main-header__button main-header__button--cart" href="#">Корзина</a>
 
       <nav class="main-navigation main-header__navigation">
         <ul class="menu">
@@ -71,17 +72,88 @@
 
       <div class="catalog-filter">
         <h2 class="catalog-filter__title">Фильтр:</h2>
-        <form class="filter-form"></form>
+
+        <form class="form filter-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form-section">
+              <legend>Стоимость</legend>
+              <label class="form-label visually-hidden" for="min-cost">Минимальная стоимость</label>
+              <input class="form-input" id="min-cost" type="number" name="min-cost" min="0">
+              <label class="form-label visually-hidden" for="max-cost">Максимальная стоимость</label>
+              <input class="form-input" id="max-cost" type="number" name="max-cost" min="1">
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Цвет</legend>
+              <ul class="form__components-list">
+                <li class="form__component">
+                  <label class="form-checkbox__label">
+                    <input class="form-checkbox" id="color-black" type="checkbox" name="color-black" checked> Черный
+                  </label>
+                </li>
+                <li class="form__component">
+                  <label class="form-checkbox__label">
+                    <input class="form-checkbox" id="color-white" type="checkbox" name="color-white"> Белый
+                  </label>
+                </li>
+                <li class="form__component">
+                  <label class="form-checkbox__label">
+                    <input class="form-checkbox" id="color-blue" type="checkbox" name="color-blue" checked> Синий
+                  </label>
+                </li>
+                <li class="form__component">
+                  <label class="form-checkbox__label">
+                    <input class="form-checkbox" id="color-red" type="checkbox" name="color-red" checked> Красный
+                  </label>
+                </li>
+                <li class="form__component">
+                  <label class="form-checkbox__label">
+                    <input class="form-checkbox" id="color-pink" type="checkbox" name="color-pink"> Розовый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Bluetooth</legend>
+              <ul class="form__components-list">
+                <li class="form__component">
+                  <label class="form-radio__label">
+                    <input class="form-radio" id="bluetooth-have" type="radio" name="bluetooth" value="have" checked> Есть
+                  </label>
+                </li>
+                <li class="form__component">
+                  <label class="form-radio__label">
+                    <input class="form-radio" id="bluetooth-havent" value="havent" type="radio" name="bluetooth"> Нет
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button" type="submit">Показать</button>
+        </form>
       </div>
 
       <div class="catalog-sort">
         <h2 class="catalog-sort__title">Сортировка:</h2>
-        <a class="catalog-sort__link" href="#">По цене</a>
-        <a class="catalog-sort__link" href="#">По типу</a>
-        <a class="catalog-sort__link" href="#">По популярности</a>
+        <ul class="catalog-sort__list">
+          <li class="catalog-sort__item catalog-sort__item--active">
+            <a class="catalog-sort__link" href="#">По цене</a>
+          </li>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href="#">По типу</a>
+          </li>
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__link" href="#">По популярности</a>
+          </li>
+        </ul>
 
-        <a class="catalog-sort__order-link catalog-sort__order-link_order_asc" href="#">По возрастанию</a>
-        <a class="catalog-sort__order-link catalog-sort__order-link_order_desc" href="#">По убыванию</a>
+        <ul class="catalog-sort__list">
+          <li class="catalog-sort__item">
+            <a class="catalog-sort__order-link catalog-sort__order-link--order--asc" href="#">По возрастанию</a>
+          </li>
+          <li class="catalog-sort__item catalog-sort__item_active">
+            <a class="catalog-sort__order-link catalog-sort__order-link--order--desc" href="#">По убыванию</a>
+          </li>
+        </ul>
       </div>
 
       <div class="catalog-items">
@@ -107,7 +179,7 @@
             <a class="button catalog-item__button-into-cart" href="#">В корзину</a>
             <a class="catalog-item__button-to-compare" href="#">Добавить к сравнению</a>
           </li>
-          <li class="catalog-item catalog-item_new">
+          <li class="catalog-item catalog-item--new">
             <img class="catalog-item__image" src="img/items/item-4.jpg" width="360" height="380" alt="Фото Селфи-палка «Следуй за мной»">
             <h2 class="catalog-item__title">Селфи-палка «Следуй за мной»</h2>
             <span class="catalog-item__price">4900 руб.</span>
@@ -122,7 +194,7 @@
         <li class="pagination-item">
           <a class="pagination-item__button" href="#">Назад</a>
         </li>
-        <li class="pagination-item pagination-item_current">
+        <li class="pagination-item pagination-item--current">
           <a class="pagination-item__button" href="#">1</a>
         </li>
         <li class="pagination-item">
@@ -142,9 +214,10 @@
         <img class="logo main-footer__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
       </a>
 
-      <a class="main-footer__button main-footer__button_login" href="#">Войти</a>
-      <a class="main-footer__button main-footer__button_compare" href="#">Сравнить</a>
-      <a class="main-footer__button main-footer__button_cart" href="#">Корзина</a>
+      <a class="main-footer__button main-footer__button--user-cabinet" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
+      <a class="main-footer__button main-footer__button--logout" href="#">Выйти</a>
+      <a class="main-footer__button main-footer__button--compare" href="#">Сравнить</a>
+      <a class="main-footer__button main-footer__button--cart" href="#">Корзина</a>
 
       <div class="main-navigation main-footer__navigation">
         <ul class="menu">
@@ -160,25 +233,29 @@
         </ul>
       </div>
 
-      <p class="main-footer__address">
-        <a class="main-footer__link" href="#">г. Москва, ул. Строителей, 15</a>
-      </p>
-      <p class="main-footer__phone">
-        Тел.: <a class="main-footer__link" href="tel:74954959595">+7 (495) 495-95-95</a>
-      </p>
+      <div class="main-footer-contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
 
-      <div class="main-footer-socials">
-        <ul class="socials-list">
-          <li class="social-item">
-            <a class="social-item__button social-item__button_type_fb" href="#">Facebook</a>
-          </li>
-          <li class="social-item">
-            <a class="social-item__button social-item__button_type_insta" href="#">Instagram</a>
-          </li>
-          <li class="social-item">
-            <a class="social-item__button social-item__button_type_tw" href="#">Twitter</a>
-          </li>
-        </ul>
+        <p class="main-footer__address">
+          <a class="main-footer__link" href="#">г. Москва, ул. Строителей, 15</a>
+        </p>
+        <p class="main-footer__phone">
+          Тел.: <a class="main-footer__link" href="tel:74954959595">+7 (495) 495-95-95</a>
+        </p>
+
+        <div class="main-footer-socials">
+          <ul class="socials-list">
+            <li class="social-item">
+              <a class="social-item__button social-item__button--type--fb" href="#">Facebook</a>
+            </li>
+            <li class="social-item">
+              <a class="social-item__button social-item__button--type--insta" href="#">Instagram</a>
+            </li>
+            <li class="social-item">
+              <a class="social-item__button social-item__button--type--tw" href="#">Twitter</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
