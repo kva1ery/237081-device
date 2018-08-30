@@ -8,14 +8,14 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__home-link">
+      <a class="home-link main-header__home-link">
         <img class="logo main-header__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
       </a>
 
       <form class="search-form">
         <label class="form-label" for="query">Поиск:</label>
         <input class="form-input search-form__query" id="query" type="text" name="query" placeholder="Поиск по сайту">
-        <button class="search-form__button search-form__button--hidden" type="submit">Найти</button>
+        <button class="search-form__button" type="submit">Найти</button>
       </form>
 
       <a class="main-header__button main-header__button--login" href="#">Войти</a>
@@ -142,9 +142,9 @@
           </li>
         </ol>
 
-        <a class="slides__button slides__button--number--1" href="#slide-1">Первая акция</a>
-        <a class="slides__button slides__button--number--2" href="#slide-2">Вторая акция</a>
-        <a class="slides__button slides__button--number--3" href="#slide-3">Третья акция</a>
+        <a class="slides__button" href="#slide-1">Первая акция</a>
+        <a class="slides__button" href="#slide-2">Вторая акция</a>
+        <a class="slides__button" href="#slide-3">Третья акция</a>
       </section>
 
       <section class="popular-categories">
@@ -152,22 +152,22 @@
 
         <ul class="catalog-categories-list">
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Виртуальная реальность</a>
+              <a class="catalog-category__button" href="catalog.html">Виртуальная реальность</a>
             </li>
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Моноподы для селфи</a>
+              <a class="catalog-category__button" href="catalog.html">Моноподы для селфи</a>
             </li>
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Экшн-камеры</a>
+              <a class="catalog-category__button" href="catalog.html">Экшн-камеры</a>
             </li>
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Фитнес-браслеты</a>
+              <a class="catalog-category__button" href="catalog.html">Фитнес-браслеты</a>
             </li>
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Умные часы</a>
+              <a class="catalog-category__button" href="catalog.html">Умные часы</a>
             </li>
             <li class="catalog-category">
-              <a class="button catalog-category__button" href="catalog.html">Квадрокоптеры</a>
+              <a class="catalog-category__button" href="catalog.html">Квадрокоптеры</a>
             </li>
           </ul>
       </section>
@@ -232,8 +232,8 @@
     </main>
 
     <footer class="main-footer">
-      <a class="main-footer__home-link">
-        <img class="logo main-footer__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
+      <a class="home-link main-footer__home-link">
+        <img class="logo main-footer__logo" src="img/logo_yellow.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
       </a>
 
       <a class="main-footer__button main-footer__button--login" href="#">Войти</a>
@@ -241,7 +241,7 @@
       <a class="main-footer__button main-footer__button--cart" href="#">Корзина</a>
 
       <div class="main-navigation main-footer__navigation">
-        <ul class="menu">
+        <ul class="menu menu--white">
           <li class="menu__item">
             <a class="menu__link" href="#">Доставка</a>
           </li>
@@ -287,15 +287,15 @@
 
       <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-section">
-          <label class="form-label" for="name">Ваше имя:</label>
+          <label class="contacts-form__label" for="name">Ваше имя:</label>
           <input class="form-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
         </div>
         <div class="form-section">
-          <label class="form-label" for="email">Ваш e-mail:</label>
+          <label class="contacts-form__label" for="email">Ваш e-mail:</label>
           <input class="form-input" id="email" type="email" name="email" placeholder="email@example.com">
         </div>
         <div class="form-section">
-          <label class="form-label" for="message">Текст письма:</label>
+          <label class="contacts-form__label" for="message">Текст письма:</label>
           <textarea class="form-input" id="message" name="message" placeholder="В свободной форме"></textarea>
         </div>
         <button class="button" type="submit">Отправить</button>
