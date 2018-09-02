@@ -7,74 +7,80 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <a class="main-header__home-link" href="index.html">
-        <img class="logo main-header__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
-      </a>
+    <div class="container"">
+      <header class="main-header">
+        <a class="main-header__home-link" href="index.html">
+          <img class="logo main-header__logo" src="img/logo.svg" width="164" height="35" alt="Логотип интернет магазина Девайс">
+        </a>
 
-      <form class="search-form">
-        <label class="form-label" for="query">Поиск:</label>
-        <input class="form-input search-form__query" id="query" type="text" name="query" placeholder="Поиск по сайту" value="Введенный текст">
-        <button class="search-form__button" type="submit">Найти</button>
-      </form>
+        <div class="main-header__row">
+          <form class="search-form">
+            <label class="form-label" for="query">Поиск:</label>
+            <input class="form-input search-form__query" id="query" type="text" name="query" placeholder="Поиск по сайту" value="Введенный текст">
+            <button class="search-form__button" type="submit">Найти</button>
+          </form>
 
-      <a class="main-header__button main-header__button--user-cabinet" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
-      <a class="main-header__button main-header__button--logout" href="#">Выйти</a>
-      <a class="main-header__button main-header__button--compare" href="#">Сравнить</a>
-      <a class="main-header__button main-header__button--cart" href="#">Корзина</a>
+          <a class="main-header__button main-header__button--user-cabinet" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
+          <a class="main-header__button main-header__button--logout" href="#">Выйти</a>
+          <a class="main-header__button main-header__button--compare" href="#">Сравнить</a>
+          <a class="main-header__button main-header__button--cart" href="#">Корзина</a>
+        </div>
 
-      <nav class="main-navigation main-header__navigation">
-        <ul class="menu">
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Каталог товаров</a>
-            <ul class="menu__submenu">
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
-              </li>
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Умные часы</a>
-              </li>
-              <li class="menu__submenu-item">
-                <a class="menu__submenu-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Доставка</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Гарантия</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="main-navigation main-header__navigation">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Каталог товаров</a>
+              <ul class="menu__submenu">
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Умные часы</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Гарантия</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <main class="main-content">
-      <h1 class="main-content__title">Моноподы для селфи</h1>
+      <div class="container">
+        <h1 class="main-content__title">Моноподы для селфи</h1>
 
-      <ul class="breadcrumbs">
-        <li class="breadcrumb-item">
-          <a class="breadcrumb-item__link" href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="breadcrumb-item__link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="breadcrumb-item__link">Моноподы для селфи</a>
-        </li>
-      </ul>
+        <ul class="breadcrumbs">
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-item__link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-item__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="breadcrumb-item__link">Моноподы для селфи</a>
+          </li>
+        </ul>
+      </div>
 
       <div class="catalog-filter">
         <h2 class="catalog-filter__title">Фильтр:</h2>
