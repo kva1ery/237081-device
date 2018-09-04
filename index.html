@@ -15,19 +15,19 @@
 
         <div class="main-header__row">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="form-label" for="query">Поиск:</label>
-            <input class="form-input search-form__query" id="query" type="text" name="query" placeholder="Поиск по сайту">
+            <label class="search-form__query-label" for="query">Поиск:</label>
+            <input class="search-form__query" id="query" type="text" name="query" placeholder="Поиск по сайту">
             <button class="search-form__button" type="submit">Найти</button>
           </form>
 
-          <a class="main-header__button main-header__button--login" href="#">Войти</a>
-          <a class="main-header__button main-header__button--compare" href="#">Сравнить</a>
-          <a class="main-header__button main-header__button--cart" href="#">Корзина</a>
+          <a class="main-button main-button__icon main-button__icon--login" href="#">Войти</a>
+          <a class="main-button main-button--align--right main-button__icon main-button__icon--compare" href="#">Сравнить</a>
+          <a class="main-button main-button__icon main-button__icon--cart" href="#">Корзина</a>
         </div>
 
         <nav class="main-navigation main-header__navigation">
             <ul class="menu">
-              <li class="menu__item">
+              <li class="menu__item menu__item--with-submenu">
                 <a class="menu__link" href="catalog.html">Каталог товаров</a>
                 <ul class="menu__submenu">
                   <li class="menu__submenu-item">
@@ -68,7 +68,7 @@
       <div class="container">
         <h1 class="main-content__title visually-hidden">Интернет магазин Девайс</h1>
 
-        <section class="slides">
+        <section class="slides visually-hidden">
           <h2 class="section-title visually-hidden">Акции и популярные товары</h2>
 
           <ol class="slides-list">
