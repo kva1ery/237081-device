@@ -135,7 +135,12 @@ input[type="radio"].visually-hidden {
 
 /******** button *********/
 .button {
-  .display: inline-block;
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -146,8 +151,28 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 
-  background-color: #f0c52e;
   border: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+
+  background-color: #f0c52e;
+}
+
+.button:hover::before {
+  top: 0;
+
+  height: 100%;
+  margin: 0;
 }
 
 .button:active {
@@ -472,21 +497,37 @@ input[type="radio"].visually-hidden {
 .menu__submenu {
   position: absolute;
   left: -60px;
-  display: flex;
+  z-index: 10;
+
+  display: none;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 600px;
   margin: 0;
-  padding: 21px 500px 60px 60px;
+  padding: 21px 500px 31px 60px;
 
   list-style: none;
 
   background-color: #f7e296;
 }
 
+.menu__item--with-submenu:focus > .menu__submenu,
+.menu__item--with-submenu:hover > .menu__submenu {
+  display: flex;
+}
+
+.menu__submenu-col-1 {
+  width: 200px;
+}
+
+.menu__submenu-col-2,
+.menu__submenu-col-3 {
+  width: 160px;
+}
+
+
 .menu__submenu-link {
-  padding-right: 60px;
-  padding-bottom: 20px;
+  display: block;
+  padding-bottom: 6px;
 
   color: #000000;
 }
@@ -512,7 +553,19 @@ input[type="radio"].visually-hidden {
   min-height: 520px;
   margin-bottom: 80px;
 
-  box-shadow: inset 0 120px 0 0 #f7e296;
+  box-shadow: inset 0 112px 0 0 #f7e296;
+}
+
+.slides::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  right: 460px;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
 }
 
 .slides-list {
@@ -536,21 +589,57 @@ input[type="radio"].visually-hidden {
 }
 
 .slide__details {
-  width: 500px;
-  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 481px;
+  padding-right: 79px;
 }
 
 .slide__lead {
+  display: block;
+  margin-top: 80px;
+
   font-weight: 800;
   font-size: 47px;
   line-height: 56px;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
+  letter-spacing: 0.01em;
+}
+
+.slide__description {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.slide__detail-button {
+  width: 220px;
+  margin: 50px 0 55px;
+}
+
+.slide__parameters {
+  order: 3;
+  border-collapse: collapse;
+}
+
+.slide__parameters tbody {
+  display: flex;
+  margin-left: -76px;
+}
+
+.slide__parameters tr {
+  display: flex;
+  flex-direction: column;
+  margin-left: 76px;
 }
 
 .slide__parameter-name {
+  padding-top: 7px;
+
   font-size: 13px;
   line-height: 20px;
+  order: 1;
 }
 
 .slide__parameter-value {
@@ -562,19 +651,51 @@ input[type="radio"].visually-hidden {
 }
 
 .slides__buttons {
-  display: flex;
-  padding: 0;
-  margin: 0;
-
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  right: 93px;
+  bottom: 177px;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
 .slides__button {
-  color: #000000;
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+  margin-left: 31px;
+
+  font-size: 0;
+}
+
+.slides__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 11px;
+  height: 11px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.slides__button--active::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: 3px;
+  height: 3px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
 }
 
 
