@@ -510,8 +510,8 @@ input[type="radio"].visually-hidden {
   background-color: #f7e296;
 }
 
-.menu__item--with-submenu:focus > .menu__submenu,
-.menu__item--with-submenu:hover > .menu__submenu {
+.menu__link:focus + .menu__submenu,
+.menu__link:hover + .menu__submenu {
   display: flex;
 }
 
@@ -523,7 +523,6 @@ input[type="radio"].visually-hidden {
 .menu__submenu-col-3 {
   width: 160px;
 }
-
 
 .menu__submenu-link {
   display: block;
@@ -569,30 +568,79 @@ input[type="radio"].visually-hidden {
 }
 
 .slides-list {
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  counter-reset: slides-counter;
 }
 
 .slide {
+position: relative;
+
   display: flex;
   justify-content: space-between;
+
+  counter-increment: slides-counter;
 }
 
-.slide__image {
+.slide::before {
+  content: "0" counter(slides-counter);
+  position: absolute;
+  top: 61px;
+  left: 905px;
+
+  font-weight: 800;
+  font-size: 179px;
+  font-family: "Gilroy", Arial, sans-serif;
+  color: #ffffff;
+}
+
+.slide-1::before {
+  left: 928px;
+}
+
+.slide-2::before {
+  left: 905px;
+}
+
+.slide-3::before {
+  left: 901px;
+}
+
+.slide__image-container {
+  position: relative;
   width: 560px;
 }
 
-.slide__image img {
+.slide__image {
   display: block;
+}
+
+.slide-1 .slide__image {
   margin: 0 auto;
 }
 
+.slide-2 .slide__image {
+  position: absolute;
+  top: 13px;
+  left: 116px;
+}
+
+.slide-3 .slide__image {
+  position: absolute;
+  top: 66px;
+  left: 31px;
+}
+
 .slide__details {
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
-  width: 481px;
-  padding-right: 79px;
+  width: 501px;
+  padding-right: 59px;
 }
 
 .slide__lead {
@@ -611,6 +659,11 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 20px;
   padding: 0;
+  padding-right: 40px;
+}
+
+.slide-1 .slide__description {
+  padding-right: 20px;
 }
 
 .slide__detail-button {
@@ -632,6 +685,10 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   margin-left: 76px;
+}
+
+.slide-3 .slide-3__parameter-2 {
+  margin-left: 43px;
 }
 
 .slide__parameter-name {
@@ -1157,7 +1214,6 @@ input[type="radio"].visually-hidden {
 .pagination-item--current .pagination-item__page-button {
   color: #000000;
 }
-
 
 .catalog-items__pagination {
   margin-top: 35px;
