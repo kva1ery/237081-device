@@ -550,7 +550,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   min-height: 520px;
-  margin-bottom: 80px;
+  margin-bottom: 74px;
 
   box-shadow: inset 0 112px 0 0 #f7e296;
 }
@@ -758,7 +758,7 @@ position: relative;
 
 /******** popular-categories *********/
 .popular-categories {
-  margin-bottom: 80px;
+  margin-bottom: 71px;
 }
 
 .catalog-categories-list {
@@ -777,35 +777,98 @@ position: relative;
   margin-top: 40px;
   margin-left: 40px;
 
-  /*------- temporary -------*/
-  min-height: 250px;
-  background: rgba(128, 0, 0, 0.2);
-  box-shadow: 0 0 0 3px red;
 }
 
 .catalog-category__button {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+  min-height: 250px;
+  padding-top: 192px;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
+}
+
+
+ .catalog-category__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 160px;
+  height: 160px;
 
   background-color: #f7e296;
 }
 
-.catalog-category__button:hover,
-.catalog-category__button:focus {
+.catalog-category__button:hover::before ,
+.catalog-category__button:focus::before {
   background-color: #f0c52e;
+}
+
+.catalog-category__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 160px;
+  height: 160px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catalog-category--vr .catalog-category__button::after {
+  background-image: url("../img/categories/vr.svg");
+}
+
+.catalog-category--monopod .catalog-category__button::after {
+  top: 19px;
+
+  background-image: url("../img/categories/monopod.svg");
+}
+
+.catalog-category--action-camera .catalog-category__button::after {
+  left: 5px;
+
+  background-image: url("../img/categories/action_camera.svg");
+}
+
+.catalog-category--fitness-band .catalog-category__button::after {
+  background-image: url("../img/categories/fitness_band.svg");
+}
+
+.catalog-category--smart-watch .catalog-category__button::after {
+  left: 4px;
+
+  background-image: url("../img/categories/smart_watch.svg");
+}
+
+.catalog-category--quadrupter .catalog-category__button::after {
+  top: 2px;
+
+  background-image: url("../img/categories/quadrupter.svg");
 }
 
 .catalog-category__button:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.catalog-category__button:active::after {
+  opacity: 0.3;
+}
+
 
 /******** services *********/
 .services {
-  min-height: 290px;
+  min-height: 288px;
   margin-bottom: 80px;
   padding-top: 100px;
 
@@ -820,13 +883,19 @@ position: relative;
 }
 
 .services__buttons {
-  width: 280px;
+  width: 277px;
   margin: 0;
   padding: 0;
+  padding-top: 83px;
 
   list-style: none;
 
   border-right: 7px solid #000000;
+}
+
+.service-button {
+  width: 160px;
+  box-sizing: border-box;
 }
 
 .service-button:active {
