@@ -28,27 +28,33 @@
 
         <nav class="main-navigation main-header__navigation">
           <ul class="menu">
-            <li class="menu__item">
+            <li class="menu__item menu__item--with-submenu">
               <a class="menu__link" href="catalog.html">Каталог товаров</a>
               <ul class="menu__submenu">
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
-                </li>
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
-                </li>
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Умные часы</a>
-                </li>
-                <li class="menu__submenu-item">
-                  <a class="menu__submenu-link" href="#">Экшн-камеры</a>
-                </li>
+                <div class="menu__submenu-col-1">
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Экшн-камеры</a>
+                  </li>
+                </div>
+                <div class="menu__submenu-col-2">
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Умные часы</a>
+                  </li>
+                </div>
+                <div class="menu__submenu-col-3">
+                  <li class="menu__submenu-item">
+                    <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </div>
               </ul>
             </li>
             <li class="menu__item">
@@ -90,60 +96,81 @@
 
           <form class="form catalog-filter__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form-section">
-              <legend>Стоимость</legend>
-              <label class="form-label visually-hidden" for="min-cost">Минимальная стоимость</label>
-              <input class="form-input" id="min-cost" type="number" name="min-cost" min="0">
-              <label class="form-label visually-hidden" for="max-cost">Максимальная стоимость</label>
-              <input class="form-input" id="max-cost" type="number" name="max-cost" min="1">
+              <h3 class="form-section__title">Стоимость</h3>
+              <div class="price-filter">
+                <div class="price-filter__range">
+                  <div class="price-filter__range-scale">
+                    <div class="price-filter__range-bar"></div>
+                  </div>
+                  <div class="price-filter__range-toggle price-filter__range-toggle--min"></div>
+                  <div class="price-filter__range-toggle price-filter__range-toggle--max"></div>
+                </div>
+                <div class="price-filter__controls">
+                  <label class="form-label price-filter__label">от <input class="form-input price-filter__input" id="min-price" type="number" name="min-price" min="0" value="0"></label>
+                  <label class="form-label price-filter__label">до <input class="form-input price-filter__input" id="max-price" type="number" name="max-price" min="1" value="5000"></label>
+                </div>
+              </div>
             </fieldset>
 
             <fieldset class="form-section">
-              <legend>Цвет</legend>
+              <h3 class="form-section__title">Цвет</h3>
               <ul class="form__components-list">
                 <li class="form__component">
-                  <label class="form-checkbox__label">
-                    <input class="form-checkbox" id="color-black" type="checkbox" name="color-black" checked> Черный
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" id="color-black" type="checkbox" name="color-black" checked>
+                    <span class="checkbox-indicator"></span>
+                    Черный
                   </label>
                 </li>
                 <li class="form__component">
-                  <label class="form-checkbox__label">
-                    <input class="form-checkbox" id="color-white" type="checkbox" name="color-white"> Белый
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" id="color-white" type="checkbox" name="color-white">
+                    <span class="checkbox-indicator"></span>
+                    Белый
                   </label>
                 </li>
                 <li class="form__component">
-                  <label class="form-checkbox__label">
-                    <input class="form-checkbox" id="color-blue" type="checkbox" name="color-blue" checked> Синий
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" id="color-blue" type="checkbox" name="color-blue" checked>
+                    <span class="checkbox-indicator"></span>
+                    Синий
                   </label>
                 </li>
                 <li class="form__component">
-                  <label class="form-checkbox__label">
-                    <input class="form-checkbox" id="color-red" type="checkbox" name="color-red" checked> Красный
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" id="color-red" type="checkbox" name="color-red" checked>
+                    <span class="checkbox-indicator"></span>
+                    Красный
                   </label>
                 </li>
                 <li class="form__component">
-                  <label class="form-checkbox__label">
-                    <input class="form-checkbox" id="color-pink" type="checkbox" name="color-pink"> Розовый
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" id="color-pink" type="checkbox" name="color-pink">
+                    <span class="checkbox-indicator"></span>
+                    Розовый
                   </label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="form-section">
-              <legend>Bluetooth</legend>
+            <fieldset class="form-section form-section__bluetooth">
+              <h3 class="form-section__title">Bluetooth</h3>
               <ul class="form__components-list">
                 <li class="form__component">
-                  <label class="form-radio__label">
-                    <input class="form-radio" id="bluetooth-have" type="radio" name="bluetooth" value="have" checked> Есть
+                  <label class="form-radio">
+                    <input class="visually-hidden" id="bluetooth-have" type="radio" name="bluetooth" value="have" checked> Есть
+                    <span class="checkbox-indicator"></span>
                   </label>
                 </li>
                 <li class="form__component">
-                  <label class="form-radio__label">
-                    <input class="form-radio" id="bluetooth-havent" value="havent" type="radio" name="bluetooth"> Нет
+                  <label class="form-radio">
+                    <input class="visually-hidden" id="bluetooth-havent" value="havent" type="radio" name="bluetooth"> Нет
+                    <span class="checkbox-indicator"></span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <button class="button catalog-filter__button" type="submit">Показать</button>
           </form>
         </div>
 
