@@ -1150,19 +1150,31 @@ position: relative;
 .main-footer__row1 {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 
 .main-footer__row2 {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .main-footer__row3 {
+  position: relative;
+
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+}
+
+.main-footer__row3::before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+
+  display: block;
+  height: 7px;
+  width: 80px;
+
+  background-color: #ffc600;
 }
 
 .main-footer__buttons {
@@ -1185,17 +1197,19 @@ position: relative;
 }
 
 .main-footer__buttons .main-button__icon--login::before {
-  background-image: url("../img/icons/user-yellow.svg");
+  background-image: url("../img/icons/user_yellow.svg");
 }
 
 .main-footer__buttons .main-button__icon--compare::before {
   left: 4px;
-  background-image: url("../img/icons/compare-yellow.svg");
+
+  background-image: url("../img/icons/compare_yellow.svg");
 }
 
 .main-footer__buttons .main-button__icon--cart::before {
   left: 2px;
-  background-image: url("../img/icons/cart-yellow.svg");
+
+  background-image: url("../img/icons/cart_yellow.svg");
 }
 
 .main-footer__button--logout {
@@ -1204,10 +1218,26 @@ position: relative;
 
 .main-footer__navigation {
   order: 1;
+  margin-top: 3px;
+  margin-left: 124px;
+}
+
+.main-footer__navigation .menu__item {
+  margin-left: 35px;
+}
+
+
+.main-footer__address {
+  order: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .main-footer__phone {
   order: 2;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
 }
 
 .main-footer__link {
@@ -1215,29 +1245,44 @@ position: relative;
 }
 
 .main-footer-socials {
-  margin-left: auto;
+  margin-top: 16px;
+  margin-left: 510px;
 }
 
 .socials-list {
   display: flex;
+  justify-content: space-between;
+  width: 140px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .social-item__button {
-  color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+
+  opacity: 0.3;
 }
 
 .social-item__button:hover,
 .social-item__button:focus {
-  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.6;
 }
 
 .social-item__button:active {
-  color: rgba(255, 255, 255, 0.1);
+  opacity: 0.1;
+}
+
+.social-item__image {
+  width: 32px;
+  height: 32px;
 }
 
 .copyright-button {
-  margin-left: auto;
+  margin-top: 14px;
+  margin-left: 483px;
+
   color: #ffc600;
 }
 
@@ -1248,6 +1293,11 @@ position: relative;
 
 .copyright-button:active {
   opacity: 0.3;
+}
+
+.copyright-button__image {
+  width: 27px;
+  height: 35px;
 }
 
 
