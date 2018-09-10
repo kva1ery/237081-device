@@ -1464,7 +1464,7 @@ position: relative;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.23em;
 }
 
 .catalog-filter__form {
@@ -1573,30 +1573,40 @@ position: relative;
 /******** catalog-sort *********/
 .catalog-sort {
   background-color: #ebebeb;
-
-  /*------- temporary -------*/
-  min-height: 70px;
 }
 
 .catalog-sort__container {
   display: flex;
   width: 760px;
+  min-height: 70px;
   padding-left: 70px;
 }
 
 .catalog-sort__title {
+  margin: 0;
+  margin-top: 23px;
+
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
+  vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.23em;
 }
 
 .catalog-sort__list {
   display: flex;
+  margin: 0;
+  margin-top: 18px;
+  margin-left: 21px;
+  padding: 0;
 
   list-style: none;
+}
+
+.catalog-sort__item {
+  margin-left: 29px;
 }
 
 .catalog-sort__link {
@@ -1605,6 +1615,7 @@ position: relative;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
 }
+
 
 .catalog-sort__link:hover,
 .catalog-sort__link:focus {
@@ -1619,6 +1630,54 @@ position: relative;
   color: #000000;
 }
 
+.catalog-sort__order-list {
+  display: flex;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-sort__order-item {
+  margin-left: 20px;
+}
+
+.catalog-sort__order-link {
+  position: relative;
+
+  display: block;
+  width: 10px;
+
+  font-size: 0;
+}
+
+.catalog-sort__order-link:before {
+  content: "";
+  position: absolute;
+
+  display: block;
+
+  border: 10px solid #000000;
+  border-right-width: 5px;
+  border-right-color: transparent;
+  border-left-width: 5px;
+  border-left-color: transparent;
+  opacity: 0.2;
+}
+
+.catalog-sort__order-link--order--asc:before {
+  border-bottom-width: 0;
+}
+
+.catalog-sort__order-link--order--desc:before {
+  border-top-width: 0;
+}
+
+.catalog-sort__item--active .catalog-sort__order-link:before {
+  opacity: 1;
+}
 
 /******** catalog-items *********/
 .catalog-items {
@@ -1663,6 +1722,7 @@ position: relative;
   position: absolute;
 }
 .catalog-item__button-to-compare {
+  position: absolute;
   font-size: 13px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5);
