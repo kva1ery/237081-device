@@ -1809,6 +1809,7 @@ position: relative;
 /******** pagination *********/
 .pagination {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 
@@ -1822,9 +1823,19 @@ position: relative;
   letter-spacing: 0.2em;
 
   background-color: #ebebeb;
+}
 
-  /*------- temporary -------*/
-  min-height: 70px;
+.pagination-item:first-child {
+  margin-right: auto;
+}
+
+.pagination-item:last-child {
+  margin-left: auto;
+}
+
+.pagination-item__button {
+  display: block;
+  padding: 23px 29px;
 }
 
 .pagination-item__button:hover,
@@ -1837,6 +1848,8 @@ position: relative;
 }
 
 .pagination-item__page-button {
+  display: block;
+  padding: 25px 8px 21px 19px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1854,5 +1867,5 @@ position: relative;
 }
 
 .catalog-items__pagination {
-  margin-top: 35px;
+  margin-top: 37px;
 }
