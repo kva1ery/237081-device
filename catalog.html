@@ -273,7 +273,7 @@
       </div> <!-- catalog -->
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--catalog">
       <div class="container">
         <div class="main-footer__row1">
           <a class="home-link main-footer__home-link">
@@ -281,10 +281,10 @@
           </a>
 
           <div class="main-footer__buttons">
-            <a class="main-footer__button main-footer__button--user-cabinet" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
-            <a class="main-footer__button main-footer__button--logout" href="#">Выйти</a>
-            <a class="main-footer__button main-footer__button--compare" href="#">Сравнить</a>
-            <a class="main-footer__button main-footer__button--cart" href="#">Корзина</a>
+            <a class="main-button main-button__icon main-button__icon--login" href="#" aria-label="Открыть личный кабинет">Валентин Петухов</a>
+            <a class="main-button main-button__logout" href="#">Выйти</a>
+            <a class="main-button main-button__icon main-button__icon--compare" href="#">Сравнить</a>
+            <a class="main-button main-button__icon main-button__icon--cart" href="#">Корзина</a>
           </div>
         </div>
 
@@ -317,18 +317,31 @@
           <div class="main-footer-socials">
             <ul class="socials-list">
               <li class="social-item">
-                <a class="social-item__button social-item__button--type--fb" href="#">Facebook</a>
+                <a class="social-item__button" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                  <img class="social-item__image" src="img/socials/facebook.svg" width="32" height="32">
+                </a>
               </li>
               <li class="social-item">
-                <a class="social-item__button social-item__button--type--insta" href="#">Instagram</a>
+                <a class="social-item__button" href="#">
+                  <span class="visually-hidden">Instagram</span>
+                  <img class="social-item__image" src="img/socials/instagram.svg" width="32" height="32">
+                </a>
               </li>
               <li class="social-item">
-                <a class="social-item__button social-item__button--type--tw" href="#">Twitter</a>
+                <a class="social-item__button" href="#">
+                  <span class="visually-hidden">Twitter</span>
+                  <img class="social-item__image" src="img/socials/twitter.svg" width="32" height="32">
+                </a>
               </li>
             </ul>
           </div>
 
-          <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">
+            <span class="visually-hidden">HTML Academy</span>
+            <img class="copyright-button__image" src="img/logo_html_academy.svg" width="32" height="32">
+            <img src="">
+          </a>
         </div>
       </div>
     </footer>

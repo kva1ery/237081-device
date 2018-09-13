@@ -1331,10 +1331,6 @@ position: relative;
   background-image: url("../img/icons/cart_yellow.svg");
 }
 
-.main-footer__button--logout {
-  opacity: 0.3;
-}
-
 .main-footer__navigation {
   order: 1;
   margin-top: 3px;
@@ -1366,6 +1362,10 @@ position: relative;
 .main-footer-socials {
   margin-top: 16px;
   margin-left: 510px;
+}
+
+.main-footer--catalog {
+  margin-top: 0;
 }
 
 .socials-list {
@@ -1683,7 +1683,7 @@ position: relative;
 /******** catalog-items *********/
 .catalog-items {
   width: 760px;
-  padding: 70px 0 80px 70px;
+  padding: 70px 0 77px 70px;
 }
 
 .catalog-items-list {
