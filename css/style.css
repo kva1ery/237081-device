@@ -637,6 +637,15 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
+.menu__submenu-col-1,
+.menu__submenu-col-2,
+.menu__submenu-col-3 {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .menu__submenu-col-1 {
   width: 200px;
 }
