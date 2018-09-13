@@ -5,7 +5,7 @@
   font-style: normal;
 
   src: url("../fonts/opensanslight.woff") format("woff"),
-   url("../fonts/opensanslight.woff2") format("woff2");
+  url("../fonts/opensanslight.woff2") format("woff2");
 }
 
 @font-face {
@@ -46,9 +46,9 @@ body {
   line-height: 30px;
   font-family: "Open Sans", Arial, sans-serif;
   color: #464646;
+  letter-spacing: 0.01em;
 
   background-color: #ffffff;
-  letter-spacing: 0.01em;
 }
 
 a {
@@ -69,14 +69,15 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(100%);
 }
 
 .container {
@@ -162,14 +163,14 @@ input[type="radio"].visually-hidden {
   top: 0;
   left: 0;
 
-  height: 23px;
   width: 27px;
+  height: 23px;
 
   background: url("../img/checkbox_off.svg") 0 0 no-repeat;
 }
 
 .form-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
-  background-image: url("../img/checkbox_on.svg")
+  background-image: url("../img/checkbox_on.svg");
 }
 
 .form-radio {
@@ -189,8 +190,8 @@ input[type="radio"].visually-hidden {
   top: 50%;
   left: 0;
 
-  height: 17px;
   width: 17px;
+  height: 17px;
   margin-top: -11px;
 
   border: 4px solid #000000;
@@ -203,8 +204,8 @@ input[type="radio"].visually-hidden {
   top: 50%;
   left: 50%;
 
-  height: 9px;
   width: 9px;
+  height: 9px;
   margin-top: -4px;
   margin-left: -4px;
 
@@ -290,11 +291,13 @@ input[type="radio"].visually-hidden {
   margin-bottom: 43px;
   padding: 0;
   padding-left: 21px;
+
   list-style: none;
 }
 
 .breadcrumb-item {
   position: relative;
+
   padding-left: 38px;
 }
 
@@ -305,8 +308,8 @@ input[type="radio"].visually-hidden {
   left: 16px;
 
   display: block;
-  height: 7px;
   width: 4px;
+  height: 7px;
 
   background: url("../img/nav-arrow.svg") 0 0 no-repeat;
 }
@@ -331,12 +334,12 @@ input[type="radio"].visually-hidden {
 
 /******** main-header *********/
 .main-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   padding: 42px 60px 48px;
-
-  position: relative;
 
   background-color: #f7e296;
 }
@@ -367,13 +370,11 @@ input[type="radio"].visually-hidden {
 }
 
 .main-button {
-
   display: block;
+  margin-left: 37px;
 
   vertical-align: middle;
   color: #000000;
-
-  margin-left: 37px;
 }
 
 .main-button:hover,
@@ -391,6 +392,7 @@ input[type="radio"].visually-hidden {
 
 .main-button__icon {
   position: relative;
+
   padding-left: 26px;
 }
 
@@ -398,7 +400,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 9px;
-  left:0;
+  left: 0;
 
   width: 13px;
   height: 13px;
@@ -413,16 +415,19 @@ input[type="radio"].visually-hidden {
 
 .main-button__icon--compare::before {
   left: 4px;
+
   background-image: url("../img/icons/compare.svg");
 }
 
 .main-button__icon--cart::before {
   left: 2px;
+
   background-image: url("../img/icons/cart.svg");
 }
 
 .main-button__logout {
   margin-left: 20px;
+
   opacity: 0.3;
 }
 
@@ -433,7 +438,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-right: 62px;
   padding: 0;
-
 }
 
 .search-form__query-label {
@@ -443,7 +447,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  font-size: 0px;
+  font-size: 0;
 }
 
 .search-form__query-label::before {
@@ -470,8 +474,8 @@ input[type="radio"].visually-hidden {
   padding-left: 38px;
 
   font: inherit;
-  letter-spacing: inherit;
   vertical-align: middle;
+  letter-spacing: inherit;
 
   background: none;
   border: none;
@@ -479,8 +483,8 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form__query::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
- }
+  color: rgba(0, 0, 0, 0.3);
+}
 .search-form__query:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -493,8 +497,8 @@ input[type="radio"].visually-hidden {
 
 .search-form__query:focus::-webkit-input-placeholder,
 .search-form__query:hover::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.6);
- }
+  color: rgba(0, 0, 0, 0.6);
+}
 .search-form__query:focus:-ms-input-placeholder,
 .search-form__query:hover:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
@@ -555,6 +559,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: nowrap;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -576,6 +581,7 @@ input[type="radio"].visually-hidden {
 
 .menu__item--with-submenu {
   position: relative;
+
   padding-right: 30px;
 }
 
@@ -708,7 +714,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide {
-position: relative;
+  position: relative;
 
   display: flex;
   justify-content: space-between;
@@ -742,6 +748,7 @@ position: relative;
 
 .slide__image-container {
   position: relative;
+
   width: 560px;
 }
 
@@ -804,6 +811,7 @@ position: relative;
 
 .slide__parameters {
   order: 3;
+
   border-collapse: collapse;
 }
 
@@ -823,11 +831,11 @@ position: relative;
 }
 
 .slide__parameter-name {
+  order: 1;
   padding-top: 7px;
 
   font-size: 13px;
   line-height: 20px;
-  order: 1;
 }
 
 .slide__parameter-value {
@@ -907,7 +915,6 @@ position: relative;
   width: 160px;
   margin-top: 40px;
   margin-left: 40px;
-
 }
 
 .catalog-category__button {
@@ -926,7 +933,7 @@ position: relative;
 }
 
 
- .catalog-category__button::before {
+.catalog-category__button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -938,7 +945,7 @@ position: relative;
   background-color: #f7e296;
 }
 
-.catalog-category__button:hover::before ,
+.catalog-category__button:hover::before,
 .catalog-category__button:focus::before {
   background-color: #f0c52e;
 }
@@ -1014,8 +1021,8 @@ position: relative;
 }
 
 .services__buttons {
-  min-height: 263px;
   width: 277px;
+  min-height: 263px;
   margin: 0;
   padding: 0;
   padding-top: 56px;
@@ -1142,13 +1149,14 @@ position: relative;
   width: 260px;
   height: 100px;
   margin-left: 40px;
-  filter: grayscale(100%);
+
   opacity: 0.2;
+  filter: grayscale(100%);
 }
 
 .brand:hover {
-  filter: none;
   opacity: 1;
+  filter: none;
 }
 
 .about-and-contacts-row {
@@ -1299,8 +1307,8 @@ position: relative;
   left: 0;
 
   display: block;
-  height: 7px;
   width: 80px;
+  height: 7px;
 
   background-color: #ffc600;
 }
@@ -1498,14 +1506,14 @@ position: relative;
 .price-filter__range-scale {
   height: 2px;
 
-  background-color: #dbdbdb
+  background-color: #dbdbdb;
 }
 
 .price-filter__range-bar {
   width: 59%;
   height: 2px;
 
-  background-color: #91c92f
+  background-color: #91c92f;
 }
 
 .price-filter__range-toggle {
@@ -1533,13 +1541,14 @@ position: relative;
   left: -5px;
 }
 
-.price-filter__range-toggle--max{
+.price-filter__range-toggle--max {
   left: 108px;
 }
 
 .price-filter__controls {
-    font-size: 0;
-    opacity: 0.2;
+  font-size: 0;
+
+  opacity: 0.2;
 }
 
 .price-filter__label {
@@ -1763,12 +1772,13 @@ position: relative;
 }
 
 .catalog-item__button-into-cart {
-  margin-top: 35px;
   width: 200px;
+  margin-top: 35px;
 }
 
 .catalog-item__button-to-compare {
   margin-top: 15px;
+
   font-size: 13px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5);
@@ -1793,8 +1803,9 @@ position: relative;
   height: 58px;
 
   font-size: 0;
+
   border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 
@@ -1859,6 +1870,7 @@ position: relative;
 .pagination-item__page-button {
   display: block;
   padding: 25px 8px 21px 19px;
+
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1877,4 +1889,71 @@ position: relative;
 
 .catalog-items__pagination {
   margin-top: 37px;
+}
+
+
+/******** modal *********/
+.modal {
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background-color: #f0c52e;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  opacity: 1;
+}
+
+.modal__close:active {
+  opacity: 0.3;
+}
+
+.modal__close::before,
+.modal__close::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 12px;
+
+  width: 30px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.modal__close::before {
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
+
+.modal-contacts {
+  top: 120px;
+  left: 50%;
+
+  width: 760px;
+  margin-left: -480px;
+  padding: 90px 100px;
 }
