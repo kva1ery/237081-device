@@ -29,32 +29,26 @@
           <ul class="menu">
             <li class="menu__item menu__item--with-submenu">
               <a class="menu__link" href="catalog.html">Каталог товаров</a>
-              <div class="menu__submenu">
-                <ul class="menu__submenu-col-1">
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
-                  </li>
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Экшн-камеры</a>
-                  </li>
-                </ul>
-                <ul class="menu__submenu-col-2">
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Умные часы</a>
-                  </li>
-                </ul>
-                <ul class="menu__submenu-col-3">
-                  <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
+              <ul class="menu__submenu">
+                <li class="menu__submenu-item menu__submenu-item--col1">
+                  <a class="menu__submenu-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Квадрокоптеры</a>
+                </li>
+                <li class="menu__submenu-item menu__submenu-item--col1">
+                  <a class="menu__submenu-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="menu__submenu-item">
+                  <a class="menu__submenu-link" href="#">Умные часы</a>
+                </li>
+                <li class="menu__submenu-item menu__submenu-item--new-line">
+                  <a class="menu__submenu-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Доставка</a>
@@ -363,19 +357,19 @@
       <h2 class="modal-title visually-hidden">Напишите нам</h2>
 
       <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-section">
-          <label class="contacts-form__label" for="name">Ваше имя:</label>
+        <div class="contacts-form__section contacts-form__section__half-width">
+          <label class="form__label" for="name">Ваше имя:</label>
           <input class="form-input" id="name" type="text" name="name" placeholder="Имя Фамилия">
         </div>
-        <div class="form-section">
-          <label class="contacts-form__label" for="email">Ваш e-mail:</label>
+        <div class="contacts-form__section contacts-form__section__half-width">
+          <label class="form__label" for="email">Ваш e-mail:</label>
           <input class="form-input" id="email" type="email" name="email" placeholder="email@example.com">
         </div>
-        <div class="form-section">
-          <label class="contacts-form__label" for="message">Текст письма:</label>
-          <textarea class="form-input" id="message" name="message" placeholder="В свободной форме"></textarea>
+        <div class="contacts-form__section">
+          <label class="form__label" for="message">Текст письма:</label>
+          <textarea class="form-input" id="message" name="message" rows="7" placeholder="В свободной форме"></textarea>
         </div>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button contacts-form__button" type="submit">Отправить</button>
       </form>
 
       <button class="modal__close" type="button" aria-label="Закрыть модальное окно">Закрыть</button>
