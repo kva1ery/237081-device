@@ -1046,8 +1046,12 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
+  word-wrap: break-word;
 }
 
+.catalog-category__button--monopod {
+  padding-right: 33px;
+}
 
 .catalog-category__button::before {
   content: "";
@@ -1247,7 +1251,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 23px;
   padding: 0;
-  padding-right: 210px;
+  padding-right: 255px;
 
   letter-spacing: 0.02em;
 }
@@ -1929,6 +1933,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item__title {
+  width: 260px;
   margin: 0;
 
   font-weight: 800;
@@ -1936,6 +1941,10 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
+}
+
+.catalog-item__title--less-width {
+  width: 200px;
 }
 
 .catalog-item__price {
