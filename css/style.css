@@ -934,6 +934,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide__parameter-name {
+  display: block;
   -ms-flex-order: 1;
   order: 1;
   padding-top: 7px;
@@ -945,6 +946,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slide__parameter-value {
+  display: block;
+
   font-weight: 300;
   font-size: 36px;
   line-height: 48px;
@@ -1179,6 +1182,7 @@ input[type="radio"].visually-hidden {
 .services-list {
   width: 700px;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   padding-right: 60px;
 
@@ -1949,6 +1953,8 @@ input[type="radio"].visually-hidden {
 
 .catalog-item__controls {
   position: absolute;
+  top: 0;
+  left: 0;
 
   display: none;
   -ms-flex-direction: column;
