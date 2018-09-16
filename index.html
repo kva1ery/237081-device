@@ -71,8 +71,18 @@
         <section class="slides">
           <h2 class="section-title visually-hidden">Акции и популярные товары</h2>
 
+          <input class="slide-1__toggle visually-hidden" id="slide-1" type="radio" name="slider-toggle" checked>
+          <input class="slide-2__toggle visually-hidden" id="slide-2" type="radio" name="slider-toggle">
+          <input class="slide-3__toggle visually-hidden" id="slide-3" type="radio" name="slider-toggle">
+
+          <div class="slides__toggles">
+            <label class="slide__toggle_indicator" for="slide-1"></label>
+            <label class="slide__toggle_indicator" for="slide-2"></label>
+            <label class="slide__toggle_indicator" for="slide-3"></label>
+          </div>
+
           <ol class="slides-list">
-            <li class="slide slide-1" id="slide-1">
+            <li class="slide slide-1">
               <div class="slide__image-container">
                 <img class="slide__image" src="img/slides/monopod-min.png" width="384" height="486" alt="Фото товара Селфи палка">
               </div>
@@ -104,7 +114,7 @@
               </div>
             </li>
 
-            <li class="slide slide-2 visually-hidden" id="slide-2">
+            <li class="slide slide-2">
               <div class="slide__image-container">
                 <img class="slide__image" src="img/slides/fitness_band-min.png" width="345" height="485" alt="Фото товара Фитнес браслет">
               </div>
@@ -128,7 +138,7 @@
               </div>
             </li>
 
-            <li class="slide slide-3 visually-hidden" id="slide-3">
+            <li class="slide slide-3">
               <div class="slide__image-container">
                 <img class="slide__image" src="img/slides/quadrupter-min.png" width="526" height="334" alt="Фото товара Квадрокоптер">
               </div>
@@ -154,18 +164,6 @@
                 </table>
                 <a class="button slide__detail-button" href="#">Подробнее</a>
               </div>
-            </li>
-          </ol>
-
-          <ol class="slides__buttons">
-            <li>
-              <a class="slides__button slides__button--active" href="#slide-1">Первая акция</a>
-            </li>
-            <li>
-              <a class="slides__button" href="#slide-2">Вторая акция</a>
-            </li>
-            <li>
-              <a class="slides__button" href="#slide-3">Третья акция</a>
             </li>
           </ol>
         </section>
@@ -200,29 +198,33 @@
         <div class="container services__container">
           <h2 class="section-title visually-hidden">Услуги</h2>
 
+          <input class="delivery__toggle visually-hidden" id="delivery" type="radio" name="service-toggle" checked>
+          <input class="warranty__toggle visually-hidden"  id="warranty" type="radio" name="service-toggle">
+          <input class="credit__toggle visually-hidden" id="credit" type="radio" name="service-toggle">
+
           <ul class="services__buttons">
             <li>
-              <a class="button service-button service-button--active" href="#delivery">Доставка</a>
+              <label class="button service-button service-button--active" for="delivery" >Доставка</label>
             </li>
             <li>
-              <a class="button service-button" href="#warranty">Гарантия</a>
+              <label class="button service-button" for="warranty">Гарантия</label>
             </li>
             <li>
-              <a class="button service-button" href="#credit">Кредит</a>
+              <label class="button service-button" for="credit">Кредит</label>
             </li>
           </ul>
 
           <ul class="services-list">
-            <li class="service service--delivery" id="delivery">
+            <li class="service service--delivery">
               <h3 class="service__title">Доставка</h3>
               <p class="service__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="service service--warranty visually-hidden" id="warranty">
+            <li class="service service--warranty visually-hidden">
               <h3 class="service__title">Гарантия</h3>
               <p class="service__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.</p>
             </li>
-            <li class="service service--credit visually-hidden" id="credit">
+            <li class="service service--credit visually-hidden">
               <h3 class="service__title">Кредит</h3>
               <p class="service__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
