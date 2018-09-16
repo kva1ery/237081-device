@@ -767,7 +767,7 @@ input[type="radio"].visually-hidden {
 .slide {
   position: relative;
 
-  display: flex;
+  display: none;
   justify-content: space-between;
 
   counter-increment: slides-counter;
@@ -897,46 +897,45 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.slides__buttons {
+.slides__toggles {
   position: absolute;
   right: 93px;
   bottom: 177px;
+  z-index: 2;
 
   display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
-.slides__button {
+.slide-1__toggle,
+.slide-2__toggle,
+.slide-3__toggle {
+  position: absolute;
+  right: 93px;
+  bottom: 177px;
+}
+
+.slide__toggle_indicator {
   position: relative;
 
-  width: 12px;
-  height: 12px;
-  margin-left: 31px;
-
-  font-size: 0;
-}
-
-.slides__button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  display: block;
   width: 11px;
   height: 11px;
+  margin-left: 31px;
 
   border: 1px solid #000000;
   border-radius: 50%;
+  font-size: 0;
+
+  cursor: pointer;
 }
 
-.slides__button--active::after {
+.slide-1__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-1"]::after,
+.slide-2__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-2"]::after,
+.slide-3__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-3"]::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
 
   width: 3px;
   height: 3px;
@@ -945,6 +944,17 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.slide-1__toggle:checked ~ .slides-list .slide-1 {
+  display: flex;
+}
+
+.slide-2__toggle:checked ~ .slides-list .slide-2 {
+  display: flex;
+}
+
+.slide-3__toggle:checked ~ .slides-list .slide-3 {
+  display: flex;
+}
 
 /******** popular-categories *********/
 .popular-categories {
@@ -1094,13 +1104,26 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.service-button--active,
-.service-button:active {
+.delivery__toggle:checked ~ .services__buttons .service-button[for="delivery"],
+.warranty__toggle:checked ~ .services__buttons .service-button[for="warranty"],
+.credit__toggle:checked ~ .services__buttons .service-button[for="credit"] {
   padding-right: 120px;
 
   color: #f7e184;
 
   background-color: #000000;
+}
+
+.slide-1__toggle:checked ~ .slides-list .slide-1 {
+  display: flex;
+}
+
+.slide-2__toggle:checked ~ .slides-list .slide-2 {
+  display: flex;
+}
+
+.slide-3__toggle:checked ~ .slides-list .slide-3 {
+  display: flex;
 }
 
 .service-button--active::before,
