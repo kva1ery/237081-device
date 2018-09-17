@@ -986,6 +986,13 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.slide-1__toggle:focus ~ .slides__toggles .slide__toggle_indicator[for="slide-1"],
+.slide-2__toggle:focus ~ .slides__toggles .slide__toggle_indicator[for="slide-2"],
+.slide-3__toggle:focus ~ .slides__toggles .slide__toggle_indicator[for="slide-3"] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .slide-1__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-1"]::after,
 .slide-2__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-2"]::after,
 .slide-3__toggle:checked ~ .slides__toggles .slide__toggle_indicator[for="slide-3"]::after {
@@ -1192,6 +1199,13 @@ input[type="radio"].visually-hidden {
 .warranty__toggle:checked ~ .services__buttons .service-button[for="warranty"]::before,
 .credit__toggle:checked ~ .services__buttons .service-button[for="credit"]::before {
   display: none;
+}
+
+.delivery__toggle:focus ~ .services__buttons .service-button[for="delivery"],
+.warranty__toggle:focus ~ .services__buttons .service-button[for="warranty"],
+.credit__toggle:focus ~ .services__buttons .service-button[for="credit"] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .delivery__toggle:checked ~ .services-list .service--delivery {
