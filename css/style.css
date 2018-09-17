@@ -790,8 +790,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
-
-  counter-reset: slides-counter;
 }
 
 .slide {
@@ -800,14 +798,12 @@ input[type="radio"].visually-hidden {
   display: none;
   justify-content: space-between;
 
-  counter-increment: slides-counter;
-
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
 }
 
 .slide::before {
-  content: "0" counter(slides-counter);
+  content: "";
   position: absolute;
   top: 61px;
   left: 905px;
@@ -819,14 +815,17 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-1::before {
+  content: "01";
   left: 928px;
 }
 
 .slide-2::before {
+  content: "02";
   left: 905px;
 }
 
 .slide-3::before {
+  content: "03";
   left: 901px;
 }
 
@@ -955,8 +954,8 @@ input[type="radio"].visually-hidden {
 
 .slides__toggles {
   position: absolute;
-  right: 93px;
-  bottom: 177px;
+  right: 82px;
+  bottom: 180px;
   z-index: 2;
 
   display: -webkit-box;
@@ -978,12 +977,12 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 11px;
   height: 11px;
-  margin-left: 31px;
+  margin-left: 20px;
+
+  font-size: 0;
 
   border: 1px solid #000000;
   border-radius: 50%;
-  font-size: 0;
-
   cursor: pointer;
 }
 
@@ -1175,6 +1174,8 @@ input[type="radio"].visually-hidden {
           box-sizing: content-box;
   width: 160px;
   padding: 0;
+
+  cursor: pointer;
 }
 
 .delivery__toggle:checked ~ .services__buttons .service-button[for="delivery"],
@@ -1187,21 +1188,22 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
-.slide-1__toggle:checked ~ .slides-list .slide-1 {
-  display: flex;
-}
-
-.slide-2__toggle:checked ~ .slides-list .slide-2 {
-  display: flex;
-}
-
-.slide-3__toggle:checked ~ .slides-list .slide-3 {
-  display: flex;
-}
-
-.service-button--active::before,
-.service-button:active::before {
+.delivery__toggle:checked ~ .services__buttons .service-button[for="delivery"]::before,
+.warranty__toggle:checked ~ .services__buttons .service-button[for="warranty"]::before,
+.credit__toggle:checked ~ .services__buttons .service-button[for="credit"]::before {
   display: none;
+}
+
+.delivery__toggle:checked ~ .services-list .service--delivery {
+  display: block;
+}
+
+.warranty__toggle:checked ~ .services-list .service--warranty {
+  display: block;
+}
+
+.credit__toggle:checked ~ .services-list .service--credit {
+  display: block;
 }
 
 .services-list {
@@ -1216,6 +1218,8 @@ input[type="radio"].visually-hidden {
 
 .service {
   position: relative;
+
+  display: none;
 }
 
 .service::before {
