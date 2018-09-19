@@ -2333,14 +2333,14 @@ input[type="radio"].visually-hidden {
 
 /******** modal-contacts *********/
 .modal-contacts {
-  top: 120px;
+  top: 50%;
   left: 50%;
 
   width: 800px;
-  margin-left: -480px;
   padding: 80px;
-}
-
+  margin-top: -277px;
+  margin-left: -480px;
+  }
 
 /******** contacts-form *********/
 .contacts-form {
@@ -2380,11 +2380,12 @@ input[type="radio"].visually-hidden {
 
 /******** modal-map *********/
 .modal-map {
-  top: 120px;
+  top: 50%;
   left: 50%;
 
   width: 960px;
   height: 559px;
+  margin-top: -280px;
   margin-left: -480px;
 }
 
